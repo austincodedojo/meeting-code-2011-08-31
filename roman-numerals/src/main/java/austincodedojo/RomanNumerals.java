@@ -6,11 +6,11 @@ public class RomanNumerals {
 		
 		if(numVal >= 1000)
 		{
-			return toChars(numVal / 1000, new String[] {"M", "?"});
+			return toChars(numVal / 1000, new String[] {"M", "?"}) + toRoman(numVal % 1000);
 		} else if (numVal >= 100) {
-			return toChars(numVal / 100, new String[] {"C", "D"});
+			return toChars(numVal / 100, new String[] {"C", "D"}) + toRoman(numVal % 100);
 		} else if (numVal >= 10) {
-			return  toChars(numVal / 10, new String[] {"X", "L"} ) + toRoman(numVal % 10);
+			return  toChars(numVal / 10, new String[] {"X", "L"}) + toRoman(numVal % 10);
 		} else {
 			return toChars(numVal, new String[] {"I", "V"});
 		}
@@ -23,6 +23,8 @@ public class RomanNumerals {
 			return chars[0] + chars[1];
 		if (numVal < 5)
 			return chars[0] + toChars(numVal-1,chars) ;
+		if (numVal == 9)
+			return chars[0] + toRoman(numVal + 1);
 		
 		return chars[1] + toChars(numVal-5, chars);
 	}

@@ -107,4 +107,16 @@ public class RomanNumeralTest {
 		assertThat(RomanNumerals.toRoman(11), is("XI"));
 	}
 	
+	@Test
+	public void one_hundred_ten_is_CX() throws Exception {
+		assertThat(RomanNumerals.toRoman(110), is("CX"));
+	}	
+	@Test
+	public void one_thousand_one_hundred_is_CX() throws Exception {
+		assertThat(RomanNumerals.toRoman(1100), is("MC"));
+	}	
+	@Test
+	public void nine_is_IX() throws Exception {
+		assertThat(RomanNumerals.toRoman(110), is("CX"));
+	}	
 }
