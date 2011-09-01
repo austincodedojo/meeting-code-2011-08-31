@@ -10,11 +10,14 @@ public class RomanNumeral {
 	
 	@Override
 	public String toString() {
-		if(numVal==1){
+		return toRomanNumeral(this.numVal);
+	}
+
+	private static String toRomanNumeral(int numVal) {
+		if (numVal == 1)
 			return "I";
-		}
-		else
-			return "II";
+
+		return toRomanNumeral(1) + toRomanNumeral(numVal -1);
 	}
 
 }
