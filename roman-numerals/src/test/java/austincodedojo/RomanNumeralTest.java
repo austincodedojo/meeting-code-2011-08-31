@@ -31,33 +31,65 @@
 
 package austincodedojo;
 
-
 import org.junit.*;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
+public class RomanNumeralTest {
 
-public class RomanNumeralTest  {
+	@Test
+	public void one_is_I() {
+		assertThat(RomanNumerals.toRoman(1), is("I"));
+	}
 
-  @Test
-  public void one_is_I() {
-    assertThat(RomanNumerals.toRoman(1), is("I"));
-  }
-  
-  @Test
-  public void two_is_II() {
-    assertThat(RomanNumerals.toRoman(2), is("II"));
-  }
-  
-  @Test
-  public void three_is_III() {
-    assertThat(RomanNumerals.toRoman(3), is("III"));
-  }
-  
-  @Test
-  public void four_is_IV() {
-    assertThat(RomanNumerals.toRoman(4), is("IV"));
-  }
-  
+	@Test
+	public void two_is_II() {
+		assertThat(RomanNumerals.toRoman(2), is("II"));
+	}
+	
+	@Test
+	public void three_is_III() throws Exception {
+		assertThat(RomanNumerals.toRoman(3), is("III"));
+	}
+
+	@Test
+	public void five_is_V() throws Exception {
+		assertThat(RomanNumerals.toRoman(5), is("V"));
+	}
+
+	@Test
+	public void ten_is_X() throws Exception {
+		assertThat(RomanNumerals.toRoman(10), is("X"));
+	}
+	
+	@Test
+	public void twenty_is_XX() throws Exception {
+		assertThat(RomanNumerals.toRoman(20), is("XX"));
+	}
+
+	@Test
+	public void thirty_is_XXX() throws Exception {
+		assertThat(RomanNumerals.toRoman(30), is("XXX"));
+	}
+	@Test
+	public void fifty_is_L() throws Exception {
+		assertThat(RomanNumerals.toRoman(50), is("L"));
+	}
+
+	@Test
+	public void one_hundred_is_C() throws Exception {
+		assertThat(RomanNumerals.toRoman(100), is("C"));
+	}
+	
+	@Test
+	public void five_hundred_is_D() throws Exception {
+		assertThat(RomanNumerals.toRoman(500), is("D"));
+	}
+
+	@Test
+	public void one_thousand_is_M() throws Exception {
+		assertThat(RomanNumerals.toRoman(1000), is("M"));
+	}
+	
 }
