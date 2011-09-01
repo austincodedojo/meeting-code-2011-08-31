@@ -31,30 +31,33 @@
 
 package austincodedojo;
 
+
 import org.junit.*;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
-/**
- * Unit test for simple App.
- */
+
 public class RomanNumeralTest  {
 
   @Test
   public void one_is_I() {
-    assertThat(new RomanNumeral(1).toString(), is("I"));
+    assertThat(RomanNumerals.toRoman(1), is("I"));
   }
+  
   @Test
   public void two_is_II() {
-    assertThat(new RomanNumeral(2).toString(), is("II"));
+    assertThat(RomanNumerals.toRoman(2), is("II"));
   }
+  
   @Test
   public void three_is_III() {
-    assertThat(new RomanNumeral(3).toString(), is("III"));
+    assertThat(RomanNumerals.toRoman(3), is("III"));
   }
+  
   @Test
   public void four_is_IV() {
-    assertThat(new RomanNumeral(4).toString(), is("IV"));
+    assertThat(RomanNumerals.toRoman(4), is("IV"));
   }
+  
 }
