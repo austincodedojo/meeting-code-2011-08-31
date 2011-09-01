@@ -45,4 +45,8 @@ public class RomanNumeralTest  {
   public void one_is_I() {
     assertThat(new RomanNumeral(1).toString(), is("I"));
   }
+  @Test
+  public void two_is_II() {
+    assertThat(new RomanNumeral(2).toString(), is("II"));
+  }
 }
