@@ -1,8 +1,11 @@
 package austincodedojo;
 
+
 public class RomanNumeral {
 
-	int numVal = 0;
+	private static String[] LOOKUP = new String[] {"no zero", "I", "II", "III", "IV"};
+	
+	int numVal;
 	
 	public RomanNumeral(int i) {
 		this.numVal = i;
@@ -14,10 +17,7 @@ public class RomanNumeral {
 	}
 
 	private static String toRomanNumeral(int numVal) {
-		if (numVal == 1)
-			return "I";
-
-		return toRomanNumeral(1) + toRomanNumeral(numVal -1);
+		return LOOKUP[numVal];
 	}
 
 }
