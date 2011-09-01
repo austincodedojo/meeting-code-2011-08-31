@@ -92,4 +92,19 @@ public class RomanNumeralTest {
 		assertThat(RomanNumerals.toRoman(1000), is("M"));
 	}
 	
+	@Test
+	public void four_is_IV() throws Exception {
+		assertThat(RomanNumerals.toRoman(4), is("IV"));
+	}
+	
+	@Test
+	public void six_is_VI() throws Exception {
+		assertThat(RomanNumerals.toRoman(6), is("VI"));
+	}
+	
+	@Test
+	public void eleven_is_XI() throws Exception {
+		assertThat(RomanNumerals.toRoman(11), is("XI"));
+	}
+	
 }
